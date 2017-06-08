@@ -9,19 +9,26 @@
 
     <groupId>com.mercadolibre.graylog.plugins</groupId>
     <artifactId>graylog-plugin-function-csv</artifactId>
-    <version>1.0.3</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
     <description>Graylog ${project.artifactId} plugin.</description>
-    <url>https://www.mercadolibre.org</url>
+    <url>https://www.graylog.org</url>
 
     <developers>
         <developer>
             <name>Alexander Campos</name>
-            <email>alexander.campos@mercadolibre.com</email>
+            <email>alexjck@gmail.com</email>
         </developer>
     </developers>
+    
+	<scm>
+        <connection>scm:git:git@github.com:alcampos/graylog-plugin-function-csv.git</connection>
+        <developerConnection>scm:git:git@github.com:alcampos/graylog-plugin-function-csv.git</developerConnection>
+        <url>https://github.com/alcampos/graylog-plugin-function-csv</url>
+        <tag>0.0.1</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
