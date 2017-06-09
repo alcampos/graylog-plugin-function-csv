@@ -32,3 +32,4 @@ deploy:
     - "${RELEASE_RPM_FILE}"
   on:
     repo: alcampos/graylog-plugin-function-csv
+    tags: true
