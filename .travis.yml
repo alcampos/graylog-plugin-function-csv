@@ -11,7 +11,8 @@ before_install:
 - sed -i.bak -e 's|https://nexus.codehaus.org/snapshots/|https://oss.sonatype.org/content/repositories/codehaus-snapshots/|g'
   ~/.m2/settings.xml
 - git clone --depth=50 --branch=2.0 https://github.com/Graylog2/graylog2-server.git  /home/travis/build/alcampos/graylog2-server
-- cd /home/travis/build/alcampos/graylog2-server; git checkout tags/2.3.0-alpha.3; mvn install -DskipTests=true -Dmaven.javadoc.skip=true; cd /home/travis/build/alcampos/graylog-plugin-function-csv
+- cd /home/travis/build/alcampos/graylog2-server; git checkout tags/2.3.0-alpha.3;
+  mvn install -DskipTests=true -Dmaven.javadoc.skip=true; cd /home/travis/build/alcampos/graylog-plugin-function-csv
 - echo "finished before_install"
 - pwd
 - ls
@@ -24,12 +25,10 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: ouBVmYbb/WthflOoF+CYxbIwonHsm5lqJO3Vsoz3mJ/x1VCV/za2BUwZxIlnpVOeZU5AZ5NV0vQ3oP9I9tu4gDwzYn62bL8mHtGSjQo4yqZo3uC162DPvzuhevRqfd0Fe27GzELHDmHv4F81kebn21F2P/zEptEhE6gJn8Jtx5RxTpCSMRR3Vthty9lYMYERwqDGiK6M2aKI1beBfzb9B3NFEmyUnm4i/O7/Lln086D7m0Ky6/s/qdN9+UFHu9kRXMiE6cVcEBqJiTRdNWMraaN8ukNXY/16icn+s8J/DTKattXDlySb7kFRbz0oGg6zjrNcQSTUVD5JPWLwqMy1F99cSQiHqFXDw0fRLxxzNMk2Dm6hVJXUKrIGnVhhRcDAZf+WsVShgt1FCnpxCJ8/I1yqkXelDbpjc1jboarCnaSRgxg0QKmkiPwkHeP0YFKAYjojnWMo7sKnussvHLziCTd0j5M5gpk7mHIusEA9TO38pULFghZnlbXt4soxyEbswjxu7OWB+B/Kje2RjfgHUcjXmxTLosfnIG9T16WJRPux7DnvAorjfzsNdkVSQau9mWoaMjV3KspiyhIepk3zlL1lylkL8Yv7J4a1DRgZ5uUf7SI7uxO3wHy9T4FBNIdNK2u2cHYd8iOpX8cn0oRwdJK2N95pEeJiPMHxTCHzmhI=
+    secure: V4svTNmplfNVKdO3T69SAzU/h1WEJvZ/T2nC2o0R3tfXjILLhIc5JYCyx6en/aEPhPOuaDPMETcjrhalaXodJKKl3JfIwIh+ucmDYePTf+oFxAI+xGgVzubK8U2f3ghwCXGG7MZ2FsFAEG4vlkY4NIQDnuC3T12Ho85IQsWIHJwpNowo631w93zVa2GWS5cggAOB3A6VnO6IGKFeh2fzrIYEHbN2/Hd/1psDL3RRV1UAMUqGoOerxqp7eyisnLdNndHoHevy4ggqQ4rt1kJsYKSPa/Ni7Nkk0awz8CHJuT+6qJVqkaqTAQR8r8rXTuMFefiai/xehdCv0WgQ1S1D55nJpI9Q1wDxivEE+o1qKgqtLvAc6ZBeX7S7lA/wicn0FoBosNq6dKrELJ6Erq/Mo+yEpXhm+9aIU4MhUOiWLpz88hA6YniPh46eiKiyvGvPhoJp8ANCs7YaaJEdRCpyGAaCWjG5yWkNTjQPGzjuH2yIfsoswGIWgq5dVebx1DRF1XVsoBAJy2Poqf4j6fjo/f0o2UqWFGfOO560cP7r1OP/KnvIkIZQ0uox3MvP5e27eCr4GHH5lmfQrHwudDXWatC2xgHiHrtRA2ZjMi591MlQUiqCdMZIjWi1+1kdC4BNqEBjF9exYVdNZv23vAVJsMWTO8k0iC3V/iOPMjiRkxg=
   file:
     - "${RELEASE_PKG_FILE}"
     - "${RELEASE_DEB_FILE}"
     - "${RELEASE_RPM_FILE}"
-  skip_cleanup: true
   on:
-    tags: true
-    jdk: oraclejdk8
+    repo: alcampos/graylog-plugin-function-csv
