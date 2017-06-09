@@ -2,7 +2,6 @@ package com.mercadolibre.plugins.csv;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import org.graylog.plugins.pipelineprocessor.EvaluationContext;
 import org.graylog.plugins.pipelineprocessor.ast.expressions.Expression;
@@ -11,6 +10,7 @@ import org.graylog.plugins.pipelineprocessor.ast.functions.FunctionArgs;
 import org.graylog.plugins.pipelineprocessor.ast.functions.FunctionDescriptor;
 import org.graylog.plugins.pipelineprocessor.ast.functions.ParameterDescriptor;
 
+@SuppressWarnings("rawtypes")
 public class CsvFunction implements Function<Map> {
 
     public static final String NAME = "csv";
