@@ -33,7 +33,7 @@ deploy:
     - "${RELEASE_PKG_FILE}"
     - "${RELEASE_DEB_FILE}"
     - "${RELEASE_RPM_FILE}"
-  deploy.skip_cleanup: true
+  skip_cleanup: true
   on:
     repo: alcampos/graylog-plugin-function-csv
     tags: true
