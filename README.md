@@ -19,8 +19,28 @@ Restart `graylog-server` and you are done.
 Usage
 -----
 
-This is the prototype of the function:
+*Function Prototype:*
 
+![function_prototype](https://github.com/alcampos/graylog-plugin-function-csv/blob/master/media/function_prototype.png)
+
+*Function usage in Graylog rules:*
+
+```
+rule "graylog_rule"
+when
+	true
+then
+  let csv_fields = "field1,field2,field3,not_used,field4,field5,not_used";
+  let csv_parsed = csv(csv_fields: csv_fields, csv_text: to_string($message.full_message), csv_separator: ",", dummy_value:"not_used");
+  set_fields(csv_parsed);
+end
+```
+
+The default value for the csv_separator is the character comma (",") and for the dummy_value is the empty character ("")
+
+*Properties of the function:*
+
+This function is time and space complexity O(n), so it won't slow down your processing.
 
 Getting started
 ---------------
