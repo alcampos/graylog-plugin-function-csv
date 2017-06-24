@@ -67,7 +67,7 @@ public class CsvFunction implements Function<Map> {
     		if(csvString.charAt(i) == '"') {
     			insideQuotes = !insideQuotes;
     		}
-        	if(!insideQuotes && csvString.charAt(i) == target3.charAt(0)) {
+        	if(!insideQuotes && csvString.substring(i, i+1).equals(target3)) {
         		String value = csvString.substring(startIndex, i);
         		final String key = fields[fieldIndex].trim().replace(" ", "_");
         		if(!value.equals("") && !target4.equals(key)) { 
