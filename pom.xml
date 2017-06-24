@@ -9,7 +9,7 @@
 
     <groupId>com.mercadolibre.graylog.plugins</groupId>
     <artifactId>graylog-plugin-function-csv</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
