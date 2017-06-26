@@ -1,4 +1,4 @@
-package com.mercadolibre.plugins.csv;
+package com.alexjck.plugins.csv;
 
 import java.util.Collections;
 import java.util.Set;

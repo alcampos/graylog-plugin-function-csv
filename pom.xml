@@ -7,9 +7,9 @@
         <maven>3.1</maven>
     </prerequisites>
 
-    <groupId>com.mercadolibre.graylog.plugins</groupId>
+    <groupId>com.alexjck.graylog.plugins</groupId>
     <artifactId>graylog-plugin-function-csv</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -50,6 +50,18 @@
             <artifactId>graylog-plugin-pipeline-processor</artifactId>
             <version>1.1.1</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.12</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
