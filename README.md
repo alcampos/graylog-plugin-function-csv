@@ -9,7 +9,7 @@ Graylog plugin to parse CSV messages in the pipeline feature
 Installation
 ------------
 
-[Download the plugin](https://travis-ci.org/alcampos/graylog-plugin-function-csv/releases)
+[Download the plugin](https://github.com/alcampos/graylog-plugin-function-csv/releases/latest)
 and place the `.jar` file in your Graylog plugin directory. The plugin directory
 is the `plugins/` folder relative from your `graylog-server` directory by default
 and can be configured in your `graylog.conf` file.
