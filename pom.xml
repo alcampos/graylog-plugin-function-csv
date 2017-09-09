@@ -9,7 +9,7 @@
 
     <groupId>com.alexjck.graylog.plugins</groupId>
     <artifactId>graylog-plugin-function-csv</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>

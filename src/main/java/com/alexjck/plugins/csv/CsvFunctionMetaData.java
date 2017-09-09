@@ -9,11 +9,11 @@ import java.util.Collections;
 import java.util.Set;
 
 public class CsvFunctionMetaData implements PluginMetaData {
-    private static final String PLUGIN_PROPERTIES = "com.mercadolibre.graylog.plugins.graylog-plugin-function-csv/graylog-plugin.properties";
+    private static final String PLUGIN_PROPERTIES = "com.alexjck.graylog.plugins.graylog-plugin-function-csv/graylog-plugin.properties";
 
     @Override
     public String getUniqueId() {
-        return "com.mercadolibre.plugins.csv.CsvFunctionPlugin";
+        return "com.alexjck.plugins.csv.CsvFunctionPlugin";
     }
 
     @Override
@@ -23,12 +23,12 @@ public class CsvFunctionMetaData implements PluginMetaData {
 
     @Override
     public String getAuthor() {
-        return "Alexander Campos <alexander.campos@mercadolibre.com>";
+        return "Alexander Campos <alexjck@gmail.com>";
     }
 
     @Override
     public URI getURL() {
-        return URI.create("https://github.com/mercadolibre/seginf-elsapci/");
+        return URI.create("https://github.com/alcampos/graylog-plugin-function-csv");
     }
 
     @Override
